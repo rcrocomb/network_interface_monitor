@@ -9,7 +9,7 @@ AR = ar
 # -Wall turn on all warnings
 # -MMD autobuild dependencies: leave out system headers
 # -MF the name of the dependency file to use.
-COMMON_FLAGS = -DDEBUG_ON=$(DEBUG_ON) -g3 -Wall
+COMMON_FLAGS = -DDEBUG_ON=$(DEBUG_ON) -std=c++98 -g3 -Wall
 CCFLAGS = $(COMMON_FLAGS)
 CXXFLAGS = $(COMMON_FLAGS)
 LIBRARIES =

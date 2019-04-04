@@ -26,6 +26,7 @@
 */
 
 #include <iostream>
+#include <cstdio>
 #include <string>               // std::string
 #include <stdexcept>            // std::runtime_error
 
@@ -59,7 +60,7 @@ extern int debug_level;
 #define cprint(format, args...) \
 ({ \
     char __paste[DEFAULT_BUFFER_SIZE]; \
-    snprintf(__paste, sizeof(__paste), format, ##args); \
+    std::snprintf(__paste, sizeof(__paste), format, ##args); \
     std::cout << __paste << std::flush; \
     __paste; \
 })
